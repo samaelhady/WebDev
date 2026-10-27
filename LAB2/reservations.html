@@ -136,17 +136,17 @@
     <div class="row">
       <input id="name" placeholder="Your name" />
       <button id="greet">Greet</button>
-    </div>
+    </div>  
     <ul id="list"></ul>
   </main>
 
   <script>
-    // Function to greet the user and add their name to the list
+    
     function addName() {
       const input = document.getElementById('name');
       const name = input.value.trim();
 
-      if (!name) return; // ignore empty input
+      if (!name) return; 
 
       document.getElementById('title').textContent = `Hello, ${name}!`;
 
@@ -154,7 +154,7 @@
       li.textContent = name;
       document.getElementById('list').appendChild(li);
 
-      input.value = ''; // clear input box
+      input.value = ''; 
     }
 
     // Function to say goodbye when a name is clicked
@@ -162,11 +162,11 @@
       if (e.target.nodeName === 'LI') {
         const name = e.target.textContent;
         document.getElementById('title').textContent = `Goodbye, ${name}! see you later.`;
-        e.target.remove(); // remove the clicked <li>
+        e.target.remove(); 
       }
     }
 
-    // Attach event listeners
+    
     document.getElementById('greet').addEventListener('click', addName);
     document.getElementById('list').addEventListener('click', removeName);
   </script>
