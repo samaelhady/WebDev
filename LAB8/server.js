@@ -10,8 +10,6 @@ let { users, posts, comments } = require("./data.js");
 
 app.use(express.json());
 
-// CORS middleware
-
 app.use((req, res, next) => {
   req.body = req.body ?? {};
 
@@ -26,12 +24,8 @@ app.use((req, res, next) => {
   next();
 });
 
-// ID counters
-
 let postCounter = Math.max(0, ...posts.map(p => p.id)) + 1;
 let commentCounter = Math.max(0, ...comments.map(c => c.id)) + 1;
-
-// Helper functions
 
 const getPostById = (id) =>
   posts.find((p) => p.id === Number(id));
@@ -40,8 +34,6 @@ const readName = (body) => body.name ?? body.title;
 
 const postNotFound = (res) =>
   res.status(404).json({ error: "Post not found" });
-
-// ==================== User Routes ====================
 
 // Get all users
 
@@ -64,8 +56,6 @@ app.get("/users/:id", (req, res) => {
 
   res.json(user);
 });
-
-// ==================== Post Routes ====================
 
 // 1. Create a new post
 
@@ -147,8 +137,6 @@ app.delete("/posts/:id", (req, res) => {
 
   res.status(204).end();
 });
-
-// ==================== Comment Routes ====================
 
 // 6. Create a new comment
 
