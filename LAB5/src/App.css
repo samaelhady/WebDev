@@ -1,0 +1,20 @@
+body { margin: 0; background: #1b1a2e; font-family: Georgia, "Times New Roman", serif; color: #f3ecdc; }
+.app { max-width: 560px; margin: 0 auto; padding: 32px 16px; }
+h1 { font-size: 2rem; margin-bottom: 24px; }
+.form { display: flex; flex-direction: column; gap: 12px; background: #27254a; padding: 16px; border-radius: 12px; }
+input, textarea { padding: 10px; border: 1px solid #4a4780; border-radius: 8px; background: #1b1a2e; color: inherit; font: inherit; }
+.picker { display: flex; gap: 4px; }
+.star { background: none; border: none; font-size: 2rem; color: #4a4780; cursor: pointer; padding: 0; }
+.star.on { color: #f5c542; }
+.add { padding: 10px; border: none; border-radius: 8px; background: #f5c542; color: #1b1a2e; font-weight: bold; cursor: pointer; }
+.add:disabled { opacity: 0.4; cursor: not-allowed; }
+:focus-visible { outline: 2px solid #f5c542; outline-offset: 2px; }
+.empty { opacity: 0.7; margin-top: 24px; }
+.list { list-style: none; padding: 0; margin-top: 24px; display: flex; flex-direction: column; gap: 12px; }
+.list li { background: #27254a; padding: 14px 16px; border-radius: 12px; }
+.row { display: flex; justify-content: space-between; align-items: center; }
+.row h2 { margin: 0; font-size: 1.2rem; }
+.remove { background: none; border: 1px solid #c0566a; color: #e88a9b; border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+.emoji { margin: 8px 0 0; font-size: 1.3rem; }
+.emoji span { font-size: 0.9rem; opacity: 0.7; }
+.comment { margin: 6px 0 0; font-style: italic; opacity: 0.85; }
